@@ -37,13 +37,14 @@ export interface HomeProps {
 }
 
 const Home = (props: HomeProps) => {
-  const [balance, setBalance] = useState<number>();
+  const isWip = true;
+  const [, setBalance] = useState<number>();
   const [isActive, setIsActive] = useState(false); // true when countdown completes
   const [isSoldOut, setIsSoldOut] = useState(false); // true when items remaining is zero
   const [isMinting, setIsMinting] = useState(false); // true when user got to press MINT
 
-  const [itemsAvailable, setItemsAvailable] = useState(0);
-  const [itemsRedeemed, setItemsRedeemed] = useState(0);
+  const [, setItemsAvailable] = useState(0);
+  const [, setItemsRedeemed] = useState(0);
   const [itemsRemaining, setItemsRemaining] = useState(0);
 
   const [alertState, setAlertState] = useState<AlertState>({
@@ -171,18 +172,20 @@ const Home = (props: HomeProps) => {
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
       )}
 
-      {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
+      {/* {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
 
       {wallet && <p>Total Available: {itemsAvailable}</p>}
 
-      {wallet && <p>Redeemed: {itemsRedeemed}</p>}
+      {wallet && <p>Redeemed: {itemsRedeemed}</p>} */}
 
       {wallet && <p>Remaining: {itemsRemaining}</p>}
 
       <MintContainer>
-        {!wallet ? (
+        {!wallet ? (!isWip ? (
           <ConnectButton>Connect Wallet</ConnectButton>
         ) : (
+          <ConnectButton disabled>Working in progress..</ConnectButton>
+        )) : (
           <MintButton
             disabled={isSoldOut || isMinting || !isActive}
             onClick={onMint}
