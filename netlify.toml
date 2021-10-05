@@ -2,20 +2,20 @@
 # All deploys from the main repository branch
 # will inherit these settings.
 [context.production.environment]
-  REACT_APP_CANDY_MACHINE_CONFIG=6GAooKgjZ4u8xQwEFUkQs97z1sxWX5zb57m7WHbULozN
-  REACT_APP_CANDY_MACHINE_ID=ze2TEy7RA3QZs2zxBAy5859YL2aRfiZGQYVbS4gvb65
-  REACT_APP_CANDY_START_DATE=1633281000
-  REACT_APP_SOLANA_NETWORK=devnet
-  REACT_APP_SOLANA_RPC_HOST=https://explorer-api.devnet.solana.com/
-  REACT_APP_TREASURY_ADDRESS=H3dsjrZtpFGUwVCVyipgGHs7jnwzm11QCd986ChoqvbM
+  REACT_APP_CANDY_MACHINE_CONFIG="6GAooKgjZ4u8xQwEFUkQs97z1sxWX5zb57m7WHbULozN"
+  REACT_APP_CANDY_MACHINE_ID="ze2TEy7RA3QZs2zxBAy5859YL2aRfiZGQYVbS4gvb65"
+  REACT_APP_CANDY_START_DATE="1633281000"
+  REACT_APP_SOLANA_NETWORK="devnet"
+  REACT_APP_SOLANA_RPC_HOST="https://explorer-api.devnet.solana.com/"
+  REACT_APP_TREASURY_ADDRESS="H3dsjrZtpFGUwVCVyipgGHs7jnwzm11QCd986ChoqvbM"
 
 # Deploy Preview context:
 # All deploys generated from a pull/merge request
 # will inherit these settings.
 [context.deploy-preview.environment]
-  REACT_APP_CANDY_MACHINE_CONFIG=6GAooKgjZ4u8xQwEFUkQs97z1sxWX5zb57m7WHbULozN
-  REACT_APP_CANDY_MACHINE_ID=ze2TEy7RA3QZs2zxBAy5859YL2aRfiZGQYVbS4gvb65
-  REACT_APP_CANDY_START_DATE=1633281000
-  REACT_APP_SOLANA_NETWORK=devnet
-  REACT_APP_SOLANA_RPC_HOST=https://explorer-api.devnet.solana.com/
-  REACT_APP_TREASURY_ADDRESS=H3dsjrZtpFGUwVCVyipgGHs7jnwzm11QCd986ChoqvbM
+  REACT_APP_CANDY_MACHINE_CONFIG="6GAooKgjZ4u8xQwEFUkQs97z1sxWX5zb57m7WHbULozN"
+  REACT_APP_CANDY_MACHINE_ID="ze2TEy7RA3QZs2zxBAy5859YL2aRfiZGQYVbS4gvb65"
+  REACT_APP_CANDY_START_DATE="1633281000"
+  REACT_APP_SOLANA_NETWORK="devnet"
+  REACT_APP_SOLANA_RPC_HOST="https://explorer-api.devnet.solana.com/"
+  REACT_APP_TREASURY_ADDRESS="H3dsjrZtpFGUwVCVyipgGHs7jnwzm11QCd986ChoqvbM"
