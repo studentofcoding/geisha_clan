@@ -50,7 +50,7 @@ const startDateSeed = parseInt(process.env.REACT_APP_CANDY_START_DATE!, 10);
 
 const txTimeout = 30000; // milliseconds (confirm this works for your project)
 
-const nftName = "Geisha Clan";
+// const nftName = "Geisha Clan";
 
 const theme = createTheme({
   palette: {
@@ -80,11 +80,11 @@ const theme = createTheme({
 const handleDragStart = (e) => e.preventDefault();
 
 const items = [
-  <img src="./showcase-1.png" onDragStart={handleDragStart} role="presentation" />,
-  <img src="./showcase-2.png" onDragStart={handleDragStart} role="presentation" />,
-  <img src="./showcase-3.png" onDragStart={handleDragStart} role="presentation" />,
-  <img src="./showcase-4.png" onDragStart={handleDragStart} role="presentation" />,
-  <img src="./showcase-5.png" onDragStart={handleDragStart} role="presentation" />
+  <img alt="imagesss" src="./showcase-1.png" onDragStart={handleDragStart} role="presentation" />,
+  <img alt="imagesss" src="./showcase-2.png" onDragStart={handleDragStart} role="presentation" />,
+  <img alt="imagesss" src="./showcase-3.png" onDragStart={handleDragStart} role="presentation" />,
+  <img alt="imagesss" src="./showcase-4.png" onDragStart={handleDragStart} role="presentation" />,
+  <img alt="imagesss" src="./showcase-5.png" onDragStart={handleDragStart} role="presentation" />
 ];
 
 const App = () => {
@@ -126,18 +126,24 @@ const App = () => {
                     THE GEISHA CLAN
                   </h1> */}
                   <div className="Hero_LinksContainer__De3u8">
-                    <a
-                      href="javascript:void(0)"
+                    {/* <a
+                      href="https://geishaclan.netlify.app"
                       rel="noreferrer"
                     >
                       Discord
                     </a>
                     <a
-                      href="javascript:void(0)"
+                      href="https://geishaclan.netlify.app"
                       rel="noreferrer"
                     >
                       Twitter
-                    </a>
+                    </a> */}
+                    <button>
+                      Discord
+                    </button>
+                    <button>
+                      Twitter
+                    </button>
                   </div>
                 </div>
               </section>
@@ -154,14 +160,16 @@ const App = () => {
                       <br/>
                       AFTER A LONG JOURNEY, THE GEISHA FINALLY FOUND A WAY TO ENTER THE SOLANA BLOCKCHAIN AND WAS READY TO MAKE A NEW LIFE THAT WILL BE ETERNAL.
                     </p>
-                    {/* <Home
-                      candyMachineId={candyMachineId}
-                      config={config}
-                      connection={connection}
-                      startDate={startDateSeed}
-                      treasury={treasury}
-                      txTimeout={txTimeout}
-                    /> */}
+                    <div className="hide">
+                      <Home
+                        candyMachineId={candyMachineId}
+                        config={config}
+                        connection={connection}
+                        startDate={startDateSeed}
+                        treasury={treasury}
+                        txTimeout={txTimeout}
+                      />
+                    </div>
                   </div>
                 </div>
               </section>
@@ -179,8 +187,8 @@ const App = () => {
                   </div>
                 </div>
                 <div className="carousel Featured_Carousel__iDGrD">                  
+                  <AliceCarousel mouseTracking infinite={true} autoPlay={true} autoHeight={false} autoWidth={true} items={items} />
                 </div>
-                <AliceCarousel mouseTracking infinite={true} autoPlay={true} autoHeight={false} autoWidth={true} items={items} />
               </section>
 
 

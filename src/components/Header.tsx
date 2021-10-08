@@ -1,5 +1,4 @@
 import "./Header.css";
-import { FaDiscord } from 'react-icons/fa';
 import { Button } from "@material-ui/core";
 // import { NavLink } from 'react-router-dom';
 
