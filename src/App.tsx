@@ -186,9 +186,9 @@ const App = () => {
                     </h3>
                   </div>
                 </div>
-                <div className="carousel Featured_Carousel__iDGrD">                  
+                {/* <div className="carousel Featured_Carousel__iDGrD">                  
+                </div> */}
                   <AliceCarousel mouseTracking infinite={true} autoPlay={true} autoWidth={true} items={items} />
-                </div>
               </section>
 
 
