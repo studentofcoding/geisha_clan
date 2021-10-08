@@ -80,11 +80,11 @@ const theme = createTheme({
 const handleDragStart = (e) => e.preventDefault();
 
 const items = [
-  <img alt="imagesss" src="./showcase-1.png" onDragStart={handleDragStart} role="presentation" />,
-  <img alt="imagesss" src="./showcase-2.png" onDragStart={handleDragStart} role="presentation" />,
-  <img alt="imagesss" src="./showcase-3.png" onDragStart={handleDragStart} role="presentation" />,
-  <img alt="imagesss" src="./showcase-4.png" onDragStart={handleDragStart} role="presentation" />,
-  <img alt="imagesss" src="./showcase-5.png" onDragStart={handleDragStart} role="presentation" />
+  <img alt="imagesss" src="./showcase-1.png" onDragStart={handleDragStart} />,
+  <img alt="imagesss" src="./showcase-2.png" onDragStart={handleDragStart} />,
+  <img alt="imagesss" src="./showcase-3.png" onDragStart={handleDragStart} />,
+  <img alt="imagesss" src="./showcase-4.png" onDragStart={handleDragStart} />,
+  <img alt="imagesss" src="./showcase-5.png" onDragStart={handleDragStart} />
 ];
 
 const App = () => {
@@ -187,7 +187,7 @@ const App = () => {
                   </div>
                 </div>
                 <div className="carousel Featured_Carousel__iDGrD">                  
-                  <AliceCarousel mouseTracking infinite={true} autoPlay={true} autoHeight={false} autoWidth={true} items={items} />
+                  <AliceCarousel mouseTracking infinite={true} autoPlay={true} autoWidth={true} items={items} />
                 </div>
               </section>
 
