@@ -1,4 +1,5 @@
 @tailwind base;
+@import "react-alice-carousel/lib/alice-carousel.css";
 
 @layer base {
   h1 {

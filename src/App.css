@@ -3,19 +3,41 @@
 }
 
 .section {
-  padding-left: 48px;
-  padding-right: 48px;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 10em 10em;
 }
 
-.app-container {
-  background-color: #74BECB;
+#journey {
+  background-color: #460302;
 }
 
 .main-section {
  min-height: 100vh;
- background-color: #000000;
+ /* background-color: #000000; */
+}
+
+.title_home {
+  font-size: 200px;
+}
+
+.title {
+  font-size: 8em;
+  margin: 50px 0;
+}
+
+@media (max-width: 675px) {
+  .title {
+    font-size: 4em;
+    margin: 50px 0;
+  }
+  .content {
+    font-size: 1em;
+    margin: 20px 0;
+  }
+}
+
+.content {
+  font-size: 2em;
+  margin: 20px 0;
 }
 
 .flex p {
