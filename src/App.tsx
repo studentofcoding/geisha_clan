@@ -26,7 +26,7 @@ import {
 import { WalletDialogProvider } from "@solana/wallet-adapter-material-ui";
 import { createTheme, ThemeProvider } from "@material-ui/core";
 
-import AliceCarousel from 'react-alice-carousel';
+// import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
 const treasury = new anchor.web3.PublicKey(
@@ -77,15 +77,15 @@ const theme = createTheme({
   },
 });
 
-const handleDragStart = (e) => e.preventDefault();
+// const handleDragStart = (e) => e.preventDefault();
 
-const items = [
-  <img alt="imagesss" src="./showcase-1.png" onDragStart={handleDragStart} />,
-  <img alt="imagesss" src="./showcase-2.png" onDragStart={handleDragStart} />,
-  <img alt="imagesss" src="./showcase-3.png" onDragStart={handleDragStart} />,
-  <img alt="imagesss" src="./showcase-4.png" onDragStart={handleDragStart} />,
-  <img alt="imagesss" src="./showcase-5.png" onDragStart={handleDragStart} />
-];
+// const items = [
+//   <img alt="imagesss" src="./showcase-1.png" onDragStart={handleDragStart} />,
+//   <img alt="imagesss" src="./showcase-2.png" onDragStart={handleDragStart} />,
+//   <img alt="imagesss" src="./showcase-3.png" onDragStart={handleDragStart} />,
+//   <img alt="imagesss" src="./showcase-4.png" onDragStart={handleDragStart} />,
+//   <img alt="imagesss" src="./showcase-5.png" onDragStart={handleDragStart} />
+// ];
 
 const App = () => {
   const endpoint = useMemo(() => clusterApiUrl(network), []);
@@ -188,7 +188,7 @@ const App = () => {
                 </div>
                 {/* <div className="carousel Featured_Carousel__iDGrD">                  
                 </div> */}
-                  <AliceCarousel mouseTracking infinite={true} autoPlay={true} autoWidth={true} items={items} />
+                  {/* <AliceCarousel mouseTracking infinite={true} autoPlay={true} autoWidth={true} items={items} /> */}
               </section>
 
 
