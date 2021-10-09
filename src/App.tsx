@@ -162,18 +162,13 @@ const App = () => {
                   </div>
                 </div>
               </section>
-              <section id="theclan" className="Featured_Wrapper__FXeTj">
-                <div className="Container Featured_Container__21lZR">
-                  <div className="Featured_Heading__1R2vu">
-                    <img
-                      src="./img-teardrop.svg"
-                      alt=""
-                      className="Featured_Teardrop__8QAEJ"
-                    />
-                    <h3 className="Featured_TheClan__24vL9">
-                      THE CLAN
-                    </h3>
-                  </div>
+              <section id="theclan" className="the_clan_section main-section">
+                <div className="container mx-auto w-full flex flex-wrap flex-col items-center">
+                  <h3 className="Featured_TheClan__24vL9">
+                    THE CLAN
+                  </h3>
+                  {/* <div className="Featured_Heading__1R2vu">
+                  </div> */}
                   <Carousel />
                   <p className="content text-center mt-3">
                     Content below Carousel
@@ -181,12 +176,12 @@ const App = () => {
                 </div>
               </section>
 
-              <section className="section main-section">
-                <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
-                  <div className="title w-full md:w-1/2 justify-center text-center">
+              <section id="joinclan" className="section main-section">
+                <div className="joinClan w-full container mx-auto flex flex-row  items-center">
+                  <div className="title w-full justify-center text-center">
                     JOIN CLAN
                   </div>
-                  <div className="flex flex-col w-full md:w-1/2 justify-center items-start text-center md:text-left">
+                  <div className="flex flex-wrap flex-col w-full justify-center items-center text-center lg:text-left">
                     {/* <p className="title text-2xl font-bold">
                       This will be <span className="font-bold">the headline</span>
                     </p> */}

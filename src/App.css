@@ -14,9 +14,10 @@
   background-color: #460302;
 }
 
-.alice-carousel__stage-item {
-  width: auto;
+.the_clan_section {
+  padding: 10em 0;
 }
+
 
 .main-section {
  min-height: 100vh;
@@ -32,7 +33,7 @@
   margin: 50px 0;
 }
 
-@media (max-width: 675px) {
+@media (max-width: 768px) {
   .title {
     font-size: 4em;
     margin: 50px 0;
@@ -40,6 +41,9 @@
   .content {
     font-size: 1em;
     margin: 20px 0;
+  }
+  .joinClan {
+    flex-direction: column;
   }
 }
 
