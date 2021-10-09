@@ -26,8 +26,7 @@ import {
 import { WalletDialogProvider } from "@solana/wallet-adapter-material-ui";
 import { createTheme, ThemeProvider } from "@material-ui/core";
 
-// import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
+import Carousel from "./components/Carousel";
 
 const treasury = new anchor.web3.PublicKey(
   process.env.REACT_APP_TREASURY_ADDRESS!
@@ -76,16 +75,6 @@ const theme = createTheme({
     },
   },
 });
-
-// const handleDragStart = (e) => e.preventDefault();
-
-// const items = [
-//   <img alt="imagesss" src="./showcase-1.png" onDragStart={handleDragStart} />,
-//   <img alt="imagesss" src="./showcase-2.png" onDragStart={handleDragStart} />,
-//   <img alt="imagesss" src="./showcase-3.png" onDragStart={handleDragStart} />,
-//   <img alt="imagesss" src="./showcase-4.png" onDragStart={handleDragStart} />,
-//   <img alt="imagesss" src="./showcase-5.png" onDragStart={handleDragStart} />
-// ];
 
 const App = () => {
   const endpoint = useMemo(() => clusterApiUrl(network), []);
@@ -160,7 +149,7 @@ const App = () => {
                       <br/>
                       AFTER A LONG JOURNEY, THE GEISHA FINALLY FOUND A WAY TO ENTER THE SOLANA BLOCKCHAIN AND WAS READY TO MAKE A NEW LIFE THAT WILL BE ETERNAL.
                     </p>
-                    <div className="hide">
+                    {/* <div className="hide">
                       <Home
                         candyMachineId={candyMachineId}
                         config={config}
@@ -169,7 +158,7 @@ const App = () => {
                         treasury={treasury}
                         txTimeout={txTimeout}
                       />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </section>
@@ -185,30 +174,24 @@ const App = () => {
                       THE CLAN
                     </h3>
                   </div>
+                  <Carousel />
+                  <p className="content text-center mt-3">
+                    Content below Carousel
+                  </p>
                 </div>
-                {/* <div className="carousel Featured_Carousel__iDGrD">                  
-                </div> */}
-                  {/* <AliceCarousel mouseTracking infinite={true} autoPlay={true} autoWidth={true} items={items} /> */}
               </section>
 
-
-              {/* <section className="section main-section">
+              <section className="section main-section">
                 <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
-                  <div className="w-full md:w-3/5 justify-center text-center">
-                    <img
-                      className="md:w-5/5 z-50"
-                      width="550px"
-                      alt="NFT name"
-                      src="/logo.png"
-                    />
+                  <div className="title w-full md:w-1/2 justify-center text-center">
+                    JOIN CLAN
                   </div>
-                  <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-                    <p className="title text-2xl font-bold">
-                      This will be <span className="font-bold">{nftName}</span>{" "}
-                      headline
-                    </p>
-                    <p className="mt-3">
-                      This will be {nftName} short description
+                  <div className="flex flex-col w-full md:w-1/2 justify-center items-start text-center md:text-left">
+                    {/* <p className="title text-2xl font-bold">
+                      This will be <span className="font-bold">the headline</span>
+                    </p> */}
+                    <p className="content mx-3">
+                      This will be headline
                     </p>
                     <Home
                       candyMachineId={candyMachineId}
@@ -218,9 +201,12 @@ const App = () => {
                       treasury={treasury}
                       txTimeout={txTimeout}
                     />
+                    <p className="content mx-3">
+                      This will be short description
+                    </p>
                   </div>
                 </div>
-              </section> */}
+              </section>
             </div>
           </WalletDialogProvider>
         </WalletProvider>
