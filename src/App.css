@@ -2,6 +2,29 @@
   text-align: center;
 }
 
+.app-container {
+  background: url(./bg/Japan\ Pattern.svg)
+}
+
+.hero_section .Container {
+  display: -moz-box;
+  display: flex;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  flex-direction: column;
+  -moz-box-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  align-items: center;
+  height: 95vh;
+}
+
+.bigLogo {
+  width: auto;
+  margin-top: 20px;
+  height : 70vh
+}
+
 .hide {
   display: none;
 }
@@ -10,12 +33,16 @@
   padding: 10em 10em;
 }
 
+#joinclan {
+  background-color: #4f1c28;
+}
+
 #journey {
-  background-color: #460302;
+  background-color: #4f1c28;
 }
 
 .the_clan_section {
-  padding: 10em 0;
+  padding: 10em 10em;
 }
 
 
@@ -29,8 +56,13 @@
 }
 
 .title {
-  font-size: 8em;
+  font-size: 5em;
   margin: 50px 0;
+}
+
+.content {
+  font-size: 1.5em;
+  margin: 20px 0;
 }
 
 @media (max-width: 768px) {
@@ -45,11 +77,6 @@
   .joinClan {
     flex-direction: column;
   }
-}
-
-.content {
-  font-size: 2em;
-  margin: 20px 0;
 }
 
 .flex p {
@@ -92,4 +119,48 @@
 
 .button {
   background-color: #303f9f !important;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .carousel-item {
+      height: auto;
+  }
+  .carousel-item > img {
+       width: 100%;
+       margin: 0 0.2em;
+  }
+}
+
+/* tablets */
+@media (max-width: 991px) and (min-width: 768px) {
+  .carousel-item {
+      height: auto;
+  }
+  .carousel-item > img {
+      width: 100%;
+      margin: 0 0.2em;
+  }
+}
+
+/* laptops */
+@media (max-width: 1023px) and (min-width: 992px) {
+  .carousel-item {
+       height: 200px;
+  }
+  .carousel-item > img {
+      width: 100%;
+      margin: 0 0.2em;
+  }
+}
+
+/* desktops */
+@media (min-width: 1024px) {
+  .carousel-item {
+      height: 300px;
+  }
+  .carousel-item > img {
+      width: 100%;
+      margin: 0 0.2em;
+  }
 }

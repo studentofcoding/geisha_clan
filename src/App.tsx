@@ -1,6 +1,6 @@
 import "./App.css";
 import "./adds_a.css";
-import "./adds_b.css";
+// import "./adds_b.css";
 
 import { useMemo } from "react";
 import Header from './components/Header';
@@ -96,9 +96,9 @@ const App = () => {
         <WalletProvider wallets={wallets} autoConnect={true}>
           <WalletDialogProvider>
             <div className="app-container">
-              <Header />
-              <section id="home" className="Hero_Wrapper__3gskU">
-                <div className="Container Hero_Container__alybC">
+              <section id="home" className="hero_section">
+                <Header />
+                <div className="Container">
                   {/* <img
                     className="Hero_Bookmark__1UTaa"
                     src="./img-bookmark-icon.svg"
@@ -106,9 +106,9 @@ const App = () => {
                     draggable="false"
                   /> */}
                   <img
-                    className="Hero_TextLogo__3d9mh"
-                    src="./img-hero-text.svg"
-                    alt="Sneaky Vampire Syndicate"
+                    className="bigLogo"
+                    src="./THE GEISHA CLAN BIG LOGO.png"
+                    alt="The Geisha Clan"
                     draggable="false"
                   />
                   {/* <h1 className="title_home">
@@ -139,7 +139,7 @@ const App = () => {
               <section id="journey" className="section">
                 <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
                   <div className="flex flex-col w-full justify-center items-start text-center">
-                    <p className="title text-xl sm:text-5xl font-bold w-full">
+                    <p className="title sm:text-5xl font-bold w-full">
                       NEW JOURNEY
                     </p>
                     <p className="content mt-3">
@@ -164,15 +164,12 @@ const App = () => {
               </section>
               <section id="theclan" className="the_clan_section main-section">
                 <div className="container mx-auto w-full flex flex-wrap flex-col items-center">
-                  <h3 className="Featured_TheClan__24vL9">
+                  <p className="title sm:text-5xl font-bold w-full">
                     THE CLAN
-                  </h3>
+                  </p>
                   {/* <div className="Featured_Heading__1R2vu">
                   </div> */}
                   <Carousel />
-                  <p className="content text-center mt-3">
-                    Content below Carousel
-                  </p>
                 </div>
               </section>
 

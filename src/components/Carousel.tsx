@@ -2,28 +2,34 @@
 
 const Carousel = () => {
   return (
-    <div className="carousel carousel-center rounded-box">
-      <div className="carousel-item">
-        <img alt="gallery" src="./showcase-1.png" className="rounded-box" />
-      </div> 
-      <div className="carousel-item">
-        <img alt="gallery" src="./showcase-2.png" className="rounded-box" />
-      </div> 
-      <div className="carousel-item">
-        <img alt="gallery" src="./showcase-3.png" className="rounded-box" />
-      </div> 
-      <div className="carousel-item">
-        <img alt="gallery" src="./showcase-4.png" className="rounded-box" />
-      </div> 
-      <div className="carousel-item">
-        <img alt="gallery" src="./showcase-5.png" className="rounded-box" />
-      </div> 
-      <div className="carousel-item">
-        <img alt="gallery" src="./showcase-6.png" className="rounded-box" />
-      </div> 
-      <div className="carousel-item">
-        <img alt="gallery" src="./showcase-7.png" className="rounded-box" />
+    <div>
+
+      <div className="carousel h-1/2 carousel-center rounded-box">
+        <div className="carousel-item">
+          <img style={{height: "100%"}} alt="gallery" src="./1.png" className="rounded-box" />
+        </div> 
+        <div className="carousel-item">
+          <img style={{height: "100%"}} alt="gallery" src="./2.png" className="rounded-box" />
+        </div> 
+        <div className="carousel-item">
+          <img style={{height: "100%"}} alt="gallery" src="./3.png" className="rounded-box" />
+        </div> 
+        <div className="carousel-item">
+          <img style={{height: "100%"}} alt="gallery" src="./4.jpeg" className="rounded-box" />
+        </div> 
+        <div className="carousel-item">
+          <img style={{height: "100%"}} alt="gallery" src="./3.png" className="rounded-box" />
+        </div> 
+        <div className="carousel-item">
+          <img style={{height: "100%"}} alt="gallery" src="./2.png" className="rounded-box" />
+        </div> 
+        <div className="carousel-item">
+          <img style={{height: "100%"}} alt="gallery" src="./1.png" className="rounded-box" />
+        </div>
       </div>
+      <p className="content text-center mt-3">
+      The Geisha Clan is a 2,222 collection of hand-drawn characters and unique traits, generatively assembled by the Clan.
+      </p>
     </div>
 
   )
