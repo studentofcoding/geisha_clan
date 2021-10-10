@@ -14,6 +14,12 @@ const Header = () => {
             <a href='#theclan'>
                 <Button variant="text">Clan</Button>
             </a>
+            <a href='#roadmap'>
+                <Button variant="text">Roadmap</Button>
+            </a>
+            <a href='#team'>
+                <Button variant="text">Team</Button>
+            </a>
         </header>
     );
 };

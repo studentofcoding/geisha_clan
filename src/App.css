@@ -21,8 +21,10 @@
 
 .bigLogo {
   width: auto;
-  margin-top: 20px;
-  height : 70vh
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  height: 70%;
 }
 
 .hide {
@@ -38,6 +40,10 @@
 }
 
 #journey {
+  background-color: #4f1c28;
+}
+
+#team {
   background-color: #4f1c28;
 }
 
@@ -65,6 +71,10 @@
   margin: 20px 0;
 }
 
+.avatar>div {
+  margin: auto 0;
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 4em;
@@ -75,6 +85,9 @@
     margin: 20px 0;
   }
   .joinClan {
+    flex-direction: column;
+  }
+  .team {
     flex-direction: column;
   }
 }
@@ -106,7 +119,6 @@
 
 .team {
   min-height: 400px;
-  background-color: #FFA384;
 }
 
 .logo-exchange {

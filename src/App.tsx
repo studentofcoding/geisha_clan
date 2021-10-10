@@ -96,7 +96,7 @@ const App = () => {
         <WalletProvider wallets={wallets} autoConnect={true}>
           <WalletDialogProvider>
             <div className="app-container">
-              <section id="home" className="hero_section">
+              <section id="home" className="hero_section bigLogo">
                 <Header />
                 <div className="Container">
                   {/* <img
@@ -107,7 +107,7 @@ const App = () => {
                   /> */}
                   <img
                     className="bigLogo"
-                    src="./THE GEISHA CLAN BIG LOGO.png"
+                    src="./BIG_LOGO.png"
                     alt="The Geisha Clan"
                     draggable="false"
                   />
@@ -176,7 +176,7 @@ const App = () => {
               <section id="joinclan" className="section main-section">
                 <div className="joinClan w-full container mx-auto flex flex-row  items-center">
                   <div className="title w-full justify-center text-center">
-                    JOIN CLAN
+                    JOIN THE CLAN
                   </div>
                   <div className="flex flex-wrap flex-col w-full justify-center items-center text-center lg:text-left">
                     {/* <p className="title text-2xl font-bold">
@@ -199,6 +199,84 @@ const App = () => {
                   </div>
                 </div>
               </section>
+
+              <section id="roadmap" className='section roadmap-section'>
+              <div className="flex flex-col w-full justify-center items-start text-center sm:text-left">
+                <p className='title w-full sm:text-5xl font-bold text-center sm:text-center text-2xl my-8'>ROADMAP</p>
+                <div className="card lg:card-side w-full">
+                  <div className="avatar m-4">
+                    <div className="w-24 h-24">
+                      <img alt="roadmap" src="./logo.png" />
+                    </div>
+                  </div> 
+                  <div className="card-body"> 
+                    <p>Chapter 1: The Journey
+                      <br/>
+                      The best Geisha starts a Journey and found a way to enter Solana Blockchain, The Clan will celebrate by Giving away Solana NFT To the community.
+For The Geisha Owner there will be 10 raffle to get 1 Special Geisha and 9 Geisha.</p>
+                  </div>
+                </div> 
+                <div className="card lg:card-side w-full">
+                  <div className="avatar m-4">
+                    <div className="w-24 h-24">
+                      <img alt="roadmap" src="./logo.png" />
+                    </div>
+                  </div>  
+                  <div className="card-body">
+                    <p>Chapter 2: Sakura Season (桜)
+                    <br/>
+                      After all The Geisha Clan deployed, Season is changed and a very magical time to make a Secondary Market Placement for The Clan.</p>
+                  </div>
+                </div>
+                <div className="card lg:card-side w-full">
+                  <div className="avatar m-4">
+                    <div className="w-24 h-24">
+                      <img alt="roadmap" src="./logo.png" />
+                    </div>
+                  </div>  
+                  <div className="card-body">
+                    <p>Chapter 3 : Explore & Prepare
+                    <br/>
+                      The Geisha Clan will listed rarity on HowRare, so all the The Clan knows what the power they hold.</p>
+                  </div>
+                </div>
+                <div className="card lg:card-side w-full">
+                  <div className="avatar m-4">
+                    <div className="w-24 h-24">
+                      <img alt="roadmap" src="./logo.png" />
+                    </div>
+                  </div>  
+                  <div className="card-body">
+                    <p>Chapter 4 : The Story Continues
+                    <br/>
+                      The Geisha Clan looking for new Alliance.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* <section id="team" className="section main-section">
+                <div className="team w-full container mx-auto flex flex-row  items-center">
+                  <div className="title w-full justify-center text-center">
+                    THE GEISHA TEAM
+                  </div>
+                  <div className="flex flex-wrap flex-col w-full justify-center items-center text-center lg:text-left">
+                    
+                    <p className="content mx-3">
+                      IPATARCH
+                    </p>
+                    <p className="content mx-3">
+                      IPATARCH
+                    </p>
+                    <p className="content mx-3">
+                      IPATARCH
+                    </p>
+                    <p className="content mx-3">
+                      IPATARCH
+                    </p>
+                  </div>
+                </div>
+              </section> */}
             </div>
           </WalletDialogProvider>
         </WalletProvider>
