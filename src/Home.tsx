@@ -19,7 +19,12 @@ import {
   shortenAddress,
 } from "./candy-machine";
 
-const ConnectButton = styled(WalletDialogButton)``;
+const ConnectButton = styled(WalletDialogButton)`
+  width: 100%;
+  text-align: center;
+  background-color: #7a2031 !important;
+  color: white;
+`;
 
 const CounterText = styled.span``; // add your styles here
 
@@ -184,13 +189,18 @@ const Home = (props: HomeProps) => {
         {!wallet ? (!isWip ? (
           <ConnectButton>Connect Wallet</ConnectButton>
         ) : (
-          <div className="p-20 border-solid rounded-lg">
-            <p className="content mx-3 text-left">
-              Price per geisha
-              <br/>
-              1 SOL
-              <br/>
-            </p>
+          <div className="px-4 py-2 m-5 wallet border-solid border-4 border-white rounded-lg">
+            <div className="content flex flex-row justify-around mx-3 text-left">
+              <p className="w-2/3">
+                Price per geisha 1 SOL
+              </p>
+              <img
+                className="smallLogo w-1/3"
+                src="./logo_white.png"
+                alt="Join The Clan"
+                draggable="false"
+              />
+            </div>
             <ConnectButton disabled>Working in progress..</ConnectButton>
             <p className="content mx-3 text-left">
               Please use Phantom wallet for the best experience
