@@ -184,7 +184,18 @@ const Home = (props: HomeProps) => {
         {!wallet ? (!isWip ? (
           <ConnectButton>Connect Wallet</ConnectButton>
         ) : (
-          <ConnectButton disabled>Working in progress..</ConnectButton>
+          <div className="p-20 border-solid rounded-lg">
+            <p className="content mx-3 text-left">
+              Price per geisha
+              <br/>
+              1 SOL
+              <br/>
+            </p>
+            <ConnectButton disabled>Working in progress..</ConnectButton>
+            <p className="content mx-3 text-left">
+              Please use Phantom wallet for the best experience
+            </p>
+          </div>
         )) : (
           <MintButton
             disabled={isSoldOut || isMinting || !isActive}

@@ -96,50 +96,33 @@ const App = () => {
         <WalletProvider wallets={wallets} autoConnect={true}>
           <WalletDialogProvider>
             <div className="app-container">
-              <section id="home" className="hero_section bigLogo">
+              <section id="home" className="landing hero_section bigLogo">
                 <Header />
                 <div className="Container">
-                  {/* <img
-                    className="Hero_Bookmark__1UTaa"
-                    src="./img-bookmark-icon.svg"
-                    alt="Bookmark Icon"
-                    draggable="false"
-                  /> */}
                   <img
                     className="bigLogo"
                     src="./BIG_LOGO.png"
                     alt="The Geisha Clan"
                     draggable="false"
                   />
-                  {/* <h1 className="title_home">
-                    THE GEISHA CLAN
-                  </h1> */}
                   <div className="Hero_LinksContainer__De3u8">
-                    {/* <a
-                      href="https://geishaclan.netlify.app"
-                      rel="noreferrer"
-                    >
+                    <button className="sosmed_button">
+                      <a href="https://discord.gg/b97UnqYN2w">
                       Discord
-                    </a>
-                    <a
-                      href="https://geishaclan.netlify.app"
-                      rel="noreferrer"
-                    >
-                      Twitter
-                    </a> */}
-                    <button>
-                      Discord
+                      </a>
                     </button>
-                    <button>
+                    <button className="sosmed_button">
+                      <a href="https://twitter.com/thegeishaclan">
                       Twitter
+                      </a>
                     </button>
                   </div>
                 </div>
               </section>
-              <section id="journey" className="section">
+              <section className="section journey">
                 <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
                   <div className="flex flex-col w-full justify-center items-start text-center">
-                    <p className="title sm:text-5xl font-bold w-full">
+                    <p id="journey" className="title sm:text-5xl font-bold w-full">
                       NEW JOURNEY
                     </p>
                     <p className="content mt-3">
@@ -162,9 +145,9 @@ const App = () => {
                   </div>
                 </div>
               </section>
-              <section id="theclan" className="the_clan_section main-section">
+              <section className="the_clan_section main-section">
                 <div className="container mx-auto w-full flex flex-wrap flex-col items-center">
-                  <p className="title sm:text-5xl font-bold w-full">
+                  <p id="theclan" className="title sm:text-5xl font-bold w-full">
                     THE CLAN
                   </p>
                   {/* <div className="Featured_Heading__1R2vu">
@@ -173,18 +156,18 @@ const App = () => {
                 </div>
               </section>
 
-              <section id="joinclan" className="section main-section">
+              <section className="section main-section joinclan">
                 <div className="joinClan w-full container mx-auto flex flex-row  items-center">
-                  <div className="title w-full justify-center text-center">
-                    JOIN THE CLAN
+                  <div id="joinclan" className="title w-full justify-center text-center">
+                    {/* JOIN THE CLAN */}
+                    <img
+                      className="bigLogo p-20"
+                      src="./join_clan.png"
+                      alt="Join The Clan"
+                      draggable="false"
+                    />
                   </div>
                   <div className="flex flex-wrap flex-col w-full justify-center items-center text-center lg:text-left">
-                    {/* <p className="title text-2xl font-bold">
-                      This will be <span className="font-bold">the headline</span>
-                    </p> */}
-                    <p className="content mx-3">
-                      This will be headline
-                    </p>
                     <Home
                       candyMachineId={candyMachineId}
                       config={config}
@@ -193,16 +176,13 @@ const App = () => {
                       treasury={treasury}
                       txTimeout={txTimeout}
                     />
-                    <p className="content mx-3">
-                      This will be short description
-                    </p>
                   </div>
                 </div>
               </section>
 
-              <section id="roadmap" className='section roadmap-section'>
+              <section className='section roadmap-section'>
               <div className="flex flex-col w-full justify-center items-start text-center sm:text-left">
-                <p className='title w-full sm:text-5xl font-bold text-center sm:text-center text-2xl my-8'>ROADMAP</p>
+                <p id="roadmap" className='title w-full sm:text-5xl font-bold text-center sm:text-center text-2xl my-8'>ROADMAP</p>
                 <div className="card lg:card-side w-full">
                   <div className="avatar m-4">
                     <div className="w-24 h-24">
@@ -255,28 +235,62 @@ For The Geisha Owner there will be 10 raffle to get 1 Special Geisha and 9 Geish
               </div>
             </section>
 
-            {/* <section id="team" className="section main-section">
-                <div className="team w-full container mx-auto flex flex-row  items-center">
-                  <div className="title w-full justify-center text-center">
-                    THE GEISHA TEAM
+            <section className="team section main-section">
+                <div id="team" className=" w-full container mx-auto flex flex-row  items-center">
+                  <div className="w-2/6">
+                    <img
+                      // className="w-2/6"
+                      src="./geisha_team.png"
+                      alt="The Geisha Clan"
+                      draggable="false"
+                    />
                   </div>
-                  <div className="flex flex-wrap flex-col w-full justify-center items-center text-center lg:text-left">
-                    
-                    <p className="content mx-3">
+
+                  <div className="w-2/6">
+                    <img
+                      className="footer_logo"
+                      src="./logo.png"
+                      alt="The Geisha Clan"
+                      draggable="false"
+                    />
+                  </div>
+
+                  <div className="flex flex-wrap flex-col w-2/6 justify-center items-center text-center lg:text-left">
+                    <button className="footer_button w-full">
+                      <a href='https://geishaclan.netlify.app/'>
                       IPATARCH
-                    </p>
-                    <p className="content mx-3">
-                      IPATARCH
-                    </p>
-                    <p className="content mx-3">
-                      IPATARCH
-                    </p>
-                    <p className="content mx-3">
-                      IPATARCH
-                    </p>
+                      </a>
+                    </button>
+                    <button className="footer_button w-full">
+                      <a href='https://geishaclan.netlify.app/'>
+                      Clevt
+                      </a>
+                    </button>
+                    <button className="footer_button w-full">
+                      <a href='https://geishaclan.netlify.app/'>
+                      Ark
+                      </a>
+                    </button>
+                    <button className="footer_button w-full">
+                      <a href='https://geishaclan.netlify.app/'>
+                      Sens
+                      </a>
+                    </button>
                   </div>
                 </div>
-              </section> */}
+                <div className="flex justify-end w-full text-right">
+                    <button className="sosmed_button">
+                      <a href="https://discord.gg/b97UnqYN2w">
+                      Discord
+                      </a>
+                    </button>
+                    <button className="sosmed_button">
+                      <a href="https://twitter.com/thegeishaclan">
+                      Twitter
+                      </a>
+                    </button>
+                  </div>
+              </section>
             </div>
           </WalletDialogProvider>
         </WalletProvider>

@@ -13,10 +13,23 @@
   -moz-box-direction: normal;
   flex-direction: column;
   -moz-box-pack: center;
-  justify-content: center;
+  justify-content: space-around;
   -moz-box-align: center;
   align-items: center;
   height: 95vh;
+}
+
+.sosmed_button > a {
+  margin : 2em;
+  text-decoration: none !important;
+  color: white;
+}
+
+.footer_button > a {
+  font-size: 2em;
+  margin : 2em;
+  text-decoration: none !important;
+  color: white;
 }
 
 .bigLogo {
@@ -24,7 +37,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
-  height: 70%;
+  height: 60%;
+}
+
+.footer_logo {
+  height: 50%;
 }
 
 .hide {
@@ -35,15 +52,7 @@
   padding: 10em 10em;
 }
 
-#joinclan {
-  background-color: #4f1c28;
-}
-
-#journey {
-  background-color: #4f1c28;
-}
-
-#team {
+.journey, .joinclan, .team {
   background-color: #4f1c28;
 }
 
@@ -54,7 +63,6 @@
 
 .main-section {
  min-height: 100vh;
- /* background-color: #000000; */
 }
 
 .title_home {
