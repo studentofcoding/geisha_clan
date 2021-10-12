@@ -222,7 +222,7 @@
   }
 }
 
-@media screen and (max-width: 442px) and (min-width: 376px) {
+@media screen and (max-width: 768px) and (min-width: 376px) {
   .bigLogo {
     width: auto;
     height: 280px;
@@ -261,6 +261,14 @@
   .joinClanLogo {
     width: 40%;
   }
+  .joinClan .content > p {
+    margin: auto 0;
+    text-align: left;
+  }
+  .joinClan button > .MuiButton-label {
+    margin: auto;
+    text-align: center !important;
+  }
   .wallet {
     text-align: center;
     align-items: center;
@@ -291,7 +299,7 @@
 }
 
 /* tablets */
-@media screen and (max-width: 991px) and (min-width: 441px) {
+@media screen and (max-width: 991px) and (min-width: 769px) {
   .carousel-item {
     height: 300px;
   }
