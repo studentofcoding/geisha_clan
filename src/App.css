@@ -156,9 +156,6 @@
   .geisha_team {
     margin: 20px auto;
   }
-  .team_pic {
-    margin: 0 10px;
-  }
   .carousel-item {
     height: 200px;
   }
@@ -174,6 +171,7 @@
   }
   .team-pic > img {
     height: auto;
+    margin: 0 15px;
   }
   .section {
   padding: 2.5rem;
@@ -233,7 +231,7 @@
   .carousel-item > img {
     width: 100%;
     height: auto;
-    margin: 0 0.2em;
+    margin: 0 15px;
   }
   .team-pic {
     height: 230px;
