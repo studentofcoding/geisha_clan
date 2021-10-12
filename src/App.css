@@ -95,7 +95,7 @@
 }
 
 .flex p {
-  color: #e0ffe9;
+  color: #ffffff;
 }
 
 .where-buy {
@@ -148,7 +148,85 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 442px) {
+@media screen and (max-width: 375px) {
+  .bigLogo {
+    width: auto;
+    height: 200px;
+  }
+  .geisha_team {
+    margin: 20px auto;
+  }
+  .team_pic {
+    margin: 0 10px;
+  }
+  .carousel-item {
+    height: 200px;
+  }
+  .carousel-item > img {
+    width: 100%;
+    height: auto;
+    margin: 0 1em;
+  }
+  .team-pic {
+    height: 200px;
+    margin: 0 0.2em;
+    width: 200px;
+  }
+  .team-pic > img {
+    height: auto;
+  }
+  .section {
+  padding: 2.5rem;
+  }
+  .title {
+  font-size: 1.75em;
+  margin: 50px 0;
+  text-align: center !important;
+  }
+  .content {
+  font-size: 0.75rem;
+  margin: 20px 0;
+  }
+  .joinClan {
+    flex-direction: column;
+  }
+  .joinClanLogo {
+    width: 40%;
+  }
+  .wallet {
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+  }
+  .wallet .content {
+    text-align: center;
+  }
+  .avatar {
+    margin: auto;
+  }
+  .team {
+    flex-direction: column;
+  }
+  #team {
+    flex-direction: column;
+  }
+  .card-body {
+    text-align: center;
+  }
+  header {
+    display: none !important;
+  }
+  .menu-mobile {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 442px) and (min-width: 376px) {
+  .bigLogo {
+    width: auto;
+    height: 280px;
+  }
   .carousel-item {
     height: 300px;
   }

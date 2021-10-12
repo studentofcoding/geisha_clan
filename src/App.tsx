@@ -96,7 +96,7 @@ const App = () => {
         <WalletProvider wallets={wallets} autoConnect={true}>
           <WalletDialogProvider>
             <div className="app-container">
-              <section id="home" className="landing hero_section bigLogo">
+              <section id="home" className="landing hero_section">
                 <Header />
                 <div className="Container">
                   <img
@@ -126,9 +126,8 @@ const App = () => {
                       NEW JOURNEY
                     </p>
                     <p className="content mt-3">
-                    The Geisha Clan is a 2,222 collection of hand-drawn characters and unique traits, generatively assembled by the Clan.
-                    <br/>
                     After taking part in the huge history of becoming a Japanese artist, Geisha want to find a new identity that had been lost in the modern era due to doubt and misconception.
+                    <br/>
                     <br/>
                     After a long Journey, The Geisha Clan finally found a way to the blockchain and was ready to make a new eternal life.
                     </p>
@@ -179,7 +178,7 @@ const App = () => {
                       <img alt="roadmap" src="./logo_white.png" />
                     </div>
                   </div> 
-                  <div className="card-body"> 
+                  <div className="content card-body"> 
                     <p>Chapter 1: The Journey
                       <br/>
                       The best Geisha starts a Journey and found a way to enter Solana Blockchain,
@@ -194,7 +193,7 @@ and a Geisha for Lucky Holder.
                       <img alt="roadmap" src="./logo_white.png" />
                     </div>
                   </div>  
-                  <div className="card-body">
+                  <div className="content card-body">
                     <p>Chapter 2: Sakura Season (桜)
                     <br/>
                     After all The Geisha Clan gets deployed, Season will change. 
@@ -208,7 +207,7 @@ And would be very magical time to make a Secondary Market and Rarity Placement f
                       <img alt="roadmap" src="./logo_white.png" />
                     </div>
                   </div>  
-                  <div className="card-body">
+                  <div className="content card-body">
                     <p>Chapter 3 : Explore & Prepare
                     <br/>
                     The clan will prepare and look for mysterious creatures to help geisha assembling the force to protect their culture and identity.</p>
@@ -220,7 +219,7 @@ And would be very magical time to make a Secondary Market and Rarity Placement f
                       <img alt="roadmap" src="./logo_white.png" />
                     </div>
                   </div>  
-                  <div className="card-body">
+                  <div className="content card-body">
                     <p>Chapter 4 : The Story Continues
                     <br/>
                     The Geisha Clan looking for new Alliance.</p>
@@ -233,6 +232,7 @@ And would be very magical time to make a Secondary Market and Rarity Placement f
                 <div id="team" className="w-full container mx-auto flex flex-row items-center">
                   <div className="w-1/2 m-10">
                     <img
+                      className="geisha_team"
                       src="./geisha_team.png"
                       alt="The Geisha Clan"
                       draggable="false"
@@ -253,6 +253,7 @@ And would be very magical time to make a Secondary Market and Rarity Placement f
 
                   <div className="w-1/2 m-10 team-pic justify-center items-center text-center">
                     <img
+                      className="team_pic"
                       src="./team_picture.png"
                       alt="The Geisha Team"
                       draggable="false"
