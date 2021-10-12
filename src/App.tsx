@@ -251,7 +251,7 @@ And would be very magical time to make a Secondary Market and Rarity Placement f
                     </div>
                   </div>
 
-                  <div className="w-1/2 m-10 team-pic justify-center items-center text-center">
+                  <div className="w-1/2 m-12 team-pic justify-center items-center text-center">
                     <img
                       className="team_pic"
                       src="./team_picture.png"
