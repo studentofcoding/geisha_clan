@@ -240,6 +240,7 @@
   }
   .team-pic > img {
     height: auto;
+    margin: 0 15px;
   }
   .section {
   padding: 4rem;
