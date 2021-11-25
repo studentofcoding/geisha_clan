@@ -19,6 +19,8 @@ import {
   shortenAddress,
 } from "./candy-machine";
 
+import { isWhitelisted } from "./whitelisted";
+
 const ConnectButton = styled(WalletDialogButton)`
   width: 100%;
   text-align: center;
@@ -42,7 +44,6 @@ export interface HomeProps {
 }
 
 const Home = (props: HomeProps) => {
-  const isWip = true;
   const [, setBalance] = useState<number>();
   const [isActive, setIsActive] = useState(false); // true when countdown completes
   const [isSoldOut, setIsSoldOut] = useState(false); // true when items remaining is zero
@@ -58,10 +59,57 @@ const Home = (props: HomeProps) => {
     severity: undefined,
   });
 
-  const [startDate, setStartDate] = useState(new Date(props.startDate));
+  const [, setStartDate] = useState(new Date(props.startDate));
 
   const wallet = useAnchorWallet();
   const [candyMachine, setCandyMachine] = useState<CandyMachine>();
+
+  const [address, setAddress] = useState("");
+  const now = new Date().getTime();
+
+  const launchDateWhitelisted = new Date(
+    Date.UTC(2021, 10, 11, 0, 0, 0, 0)
+  ).getTime();
+  const launchDate = new Date(Date.UTC(2021, 10, 29, 0, 5, 0, 0)).getTime();
+  const [whitelisted, setWhitelisted] = useState(false);
+  const [canMint, setCanMint] = useState(false);
+
+  useEffect(() => {
+    if (!address) {
+      setCanMint(false);
+      return;
+    }
+
+    if (now < launchDateWhitelisted) {
+      setCanMint(false);
+      return;
+    }
+
+    if (whitelisted && now >= launchDateWhitelisted) {
+      setCanMint(true);
+      return;
+    }
+
+    if (!whitelisted && now >= launchDateWhitelisted && now < launchDate) {
+      setCanMint(false);
+      return;
+    }
+
+    if (now >= launchDate) {
+      setCanMint(true);
+      return;
+    }
+  }, [whitelisted, address, launchDate, launchDateWhitelisted, now]);
+
+  useEffect(() => {
+    if (wallet) setAddress(wallet?.publicKey.toBase58());
+  }, [wallet]);
+
+  useEffect(() => {
+    if (address) {
+      setWhitelisted(isWhitelisted(address));
+    }
+  }, [address]);
 
   const refreshCandyMachineState = () => {
     (async () => {
@@ -177,18 +225,10 @@ const Home = (props: HomeProps) => {
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
       )}
 
-      {/* {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
-
-      {wallet && <p>Total Available: {itemsAvailable}</p>}
-
-      {wallet && <p>Redeemed: {itemsRedeemed}</p>} */}
-
       {wallet && <p>Remaining: {itemsRemaining}</p>}
 
-      <MintContainer>
-        {!wallet ? (!isWip ? (
-          <ConnectButton>Connect Wallet</ConnectButton>
-        ) : (
+      <MintContainer className='mt-4 text-centered'>
+        {!wallet ? (
           <div className="px-4 py-2 m-5 wallet border-solid border-4 border-white rounded-lg">
             <div className="content flex flex-row justify-around mx-3 text-left">
               <p className="w-2/3">
@@ -201,34 +241,84 @@ const Home = (props: HomeProps) => {
                 draggable="false"
               />
             </div>
-            <ConnectButton disabled>Working in progress..</ConnectButton>
+            <ConnectButton>Connect Wallet</ConnectButton>
             <p className="content mx-3 text-left">
               Please use Phantom wallet for the best experience
             </p>
           </div>
-        )) : (
-          <MintButton
-            disabled={isSoldOut || isMinting || !isActive}
-            onClick={onMint}
-            variant="contained"
-          >
-            {isSoldOut ? (
-              "SOLD OUT"
-            ) : isActive ? (
-              isMinting ? (
-                <CircularProgress />
-              ) : (
-                "MINT"
-              )
+        ) : (
+          <>
+            {!whitelisted ? (
+              <>
+                <div className="waiting text-center text-lg font-bold text-white">
+                  {/* <p style={{display:"none"}}>
+                    {itemsAvailable}  NFTs left!
+                  </p>
+                  <p style={{display:"none"}}>
+                    {itemsRedeemed}  NFTs left!
+                  </p> */}
+                </div>
+                <MintButton
+                  disabled={isSoldOut || isMinting || !isActive || !canMint}
+                  onClick={onMint}
+                  variant="outlined"
+                >
+                  {isSoldOut ? (
+                    "Geisha Clan SOLD OUT!"
+                  ) : isActive ? (
+                    isMinting ? (
+                      <CircularProgress />
+                    ) : (
+                      `Mint your Geisha!`
+                    )
+                  ) : (
+                    <Countdown
+                      // date={startDate}
+                      date={launchDate}
+                      onMount={({ completed }) => completed && setIsActive(true)}
+                      onComplete={() => setIsActive(true)}
+                      renderer={renderCounter}
+                    />
+                  )}
+                </MintButton>
+              </>
             ) : (
-              <Countdown
-                date={startDate}
-                onMount={({ completed }) => completed && setIsActive(true)}
-                onComplete={() => setIsActive(true)}
-                renderer={renderCounter}
-              />
+              <>
+                <div className="waiting text-center text-lg font-bold text-white">
+                  {/* <p style={{display:"none"}}>
+                    {itemsAvailable}  NFTs left!
+                  </p>
+                  <p style={{display:"none"}}>
+                    {itemsRedeemed}  NFTs left!
+                  </p> */}
+                  <p className='text-lg font-bold text-white text-opacity-90 mb-4'>You're whitelisted!</p>
+                </div>
+                <MintButton
+                  disabled={isSoldOut || isMinting || !isActive || !canMint}
+                  onClick={onMint}
+                  variant="outlined"
+                >
+                  {isSoldOut ? (
+                    "Geisha Clan SOLD OUT!"
+                  ) : isActive ? (
+                    isMinting ? (
+                      <CircularProgress />
+                    ) : (
+                      `Mint your Geisha!`
+                    )
+                  ) : (
+                    <Countdown
+                      // date={startDate}
+                      date={launchDateWhitelisted}
+                      onMount={({ completed }) => completed && setIsActive(true)}
+                      onComplete={() => setIsActive(true)}
+                      renderer={renderCounter}
+                    />
+                  )}
+                </MintButton>
+              </>
             )}
-          </MintButton>
+          </>
         )}
       </MintContainer>
 

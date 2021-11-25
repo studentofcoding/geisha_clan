@@ -10,6 +10,7 @@
 
 # production
 /build
+/candy_machine
 
 # misc
 .DS_Store
