@@ -6,25 +6,19 @@ const Carousel = () => {
 
       <div className="carousel h-1/2 carousel-center rounded-box">
         <div className="carousel-item">
-          <img style={{height: "100%"}} alt="gallery" src="./1.png" className="rounded-box" />
+          <img style={{height: "100%"}} alt="gallery" src="./1.jpeg" className="rounded-box" />
         </div> 
         <div className="carousel-item">
-          <img style={{height: "100%"}} alt="gallery" src="./2.png" className="rounded-box" />
+          <img style={{height: "100%"}} alt="gallery" src="./2.jpeg" className="rounded-box" />
         </div> 
         <div className="carousel-item">
-          <img style={{height: "100%"}} alt="gallery" src="./3.png" className="rounded-box" />
+          <img style={{height: "100%"}} alt="gallery" src="./3.jpeg" className="rounded-box" />
         </div> 
         <div className="carousel-item">
           <img style={{height: "100%"}} alt="gallery" src="./4.jpeg" className="rounded-box" />
         </div> 
         <div className="carousel-item">
-          <img style={{height: "100%"}} alt="gallery" src="./3.png" className="rounded-box" />
-        </div> 
-        <div className="carousel-item">
-          <img style={{height: "100%"}} alt="gallery" src="./2.png" className="rounded-box" />
-        </div> 
-        <div className="carousel-item">
-          <img style={{height: "100%"}} alt="gallery" src="./1.png" className="rounded-box" />
+          <img style={{height: "100%"}} alt="gallery" src="./5.jpeg" className="rounded-box" />
         </div>
       </div>
       <p className="content text-center mt-3">
