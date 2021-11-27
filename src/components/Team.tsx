@@ -23,7 +23,7 @@ const Team = () => {
                     </a>
                   </div>
                 </div>
-                <p className="team_name">Clev</p>
+                <p className="team_name">Clevt</p>
                 <p className="team_description">(Marketing)</p>
               </div> 
           </div>
