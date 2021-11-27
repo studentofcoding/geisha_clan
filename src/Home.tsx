@@ -241,6 +241,7 @@ const Home = (props: HomeProps) => {
                 draggable="false"
               />
             </div>
+            {/* <ConnectButton>Connect Wallet</ConnectButton> */}
             <ConnectButton disabled>Geisha Clan will be launched soon..</ConnectButton>
             <p className="content mx-3 text-left">
               Please use Phantom wallet for the best experience

@@ -1,11 +1,10 @@
 import "./App.css";
-// import "./adds_a.css";
-// import "./adds_b.css";
 
 import { useMemo } from "react";
 import Header from './components/Header';
 
 import Home from "./Home";
+import Team from "./components/Team";
 
 import * as anchor from "@project-serum/anchor";
 import { clusterApiUrl } from "@solana/web3.js";
@@ -228,7 +227,7 @@ And would be very magical time to make a Secondary Market and Rarity Placement f
               </div>
             </section>
 
-            <section className="team section main-section">
+            <section className="team main-section">
                 <div id="team" className="w-full container mx-auto flex flex-row items-center">
                   <div className="w-1/2 m-10">
                     <img
@@ -251,13 +250,8 @@ And would be very magical time to make a Secondary Market and Rarity Placement f
                     </div>
                   </div>
 
-                  <div className="w-1/2 m-12 team-pic justify-center items-center text-center">
-                    <img
-                      className="team_pic"
-                      src="./team_picture.png"
-                      alt="The Geisha Team"
-                      draggable="false"
-                    />
+                  <div className="w-1/2 m-12 justify-center items-center text-center">
+                    <Team />
                   </div>
                 </div>
               </section>
