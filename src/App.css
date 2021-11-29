@@ -71,6 +71,11 @@
   padding: 10rem 14rem;
 }
 
+p.chapter {
+  font-size: 1.3em;
+  margin-bottom: 0.4em;
+}
+
 
 .main-section {
  min-height: 100vh;
@@ -154,7 +159,7 @@
     height: 200px;
   }
   .geisha_team {
-    margin: 20px auto;
+    margin: 10px auto;
   }
   .carousel-item {
     height: 200px;
@@ -164,17 +169,8 @@
     height: auto;
     margin: 0 1em;
   }
-  .team-pic {
-    height: 200px;
-    margin: 0 0.2em;
-    width: 200px;
-  }
-  .team-pic > img {
-    height: auto;
-    margin: 0 15px;
-  }
   .section {
-  padding: 2.5rem;
+    padding: 2.5rem;
   }
   .title {
   font-size: 1.75em;
@@ -201,11 +197,12 @@
     text-align: center;
   }
   .avatar {
-    margin: auto;
+    margin: 0;
   }
-  .team {
+  
+  /* .team {
     flex-direction: column;
-  }
+  } */
   #team {
     flex-direction: column;
   }
@@ -249,14 +246,8 @@
     height: auto;
     margin: 0 15px;
   }
-  .team-pic {
-    height: 230px;
-    margin: 0 0.2em;
-    width: 230px;
-  }
-  .team-pic > img {
-    height: auto;
-    margin: 0 15px;
+  .team-tengah {
+    margin: 1.5rem;
   }
   .section {
   padding: 4rem;
@@ -401,16 +392,3 @@
     padding: 10rem;
   }
 }
-
-/* @media screen and (min-width: 1441px) {
-  .section {
-    padding: 10rem 17rem;
-  }
-  .carousel-item {
-      height: 300px;
-  }
-  .carousel-item > img {
-      width: 100%;
-      margin: 0 0.2em;
-  }
-} */
