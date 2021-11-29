@@ -2,9 +2,10 @@ import "./Team.css";
 
 const Team = () => {
     return (
-      <div className="flex justify-between">
+      <div className="w-1/2 m-8 justify-center items-center text-center">
+        <div className="flex justify-between">
           <div className="m-auto flex-wrap justify-between">
-              <div className="my-16">
+              <div className="my-14">
                 <div className="avatar">
                   <div className="mb-8 rounded-full w-14 h-14">
                     <a href="https://twitter.com/ipatarch">
@@ -15,7 +16,7 @@ const Team = () => {
                 <p className="team_name">Ipatarch</p>
                 <p className="team_description">(Project Lead)</p>
               </div>
-              <div className="my-16">
+              <div className="my-14">
                 <div className="avatar">
                   <div className="mb-8 rounded-full w-14 h-14">
                     <a href="https://twitter.com/itsclevt?s=21">
@@ -23,12 +24,12 @@ const Team = () => {
                     </a>
                   </div>
                 </div>
-                <p className="team_name">Clev</p>
+                <p className="team_name">Clevt</p>
                 <p className="team_description">(Marketing)</p>
               </div> 
           </div>
           <div className="m-auto justify-center flex">
-              <div className="m-6">
+              <div className="team-tengah">
                 <div className="avatar">
                   <div className="mb-8 rounded-full w-14 h-14">
                     <a href="https://twitter.com/wjsens02?s=21">
@@ -41,7 +42,7 @@ const Team = () => {
               </div>
           </div>
           <div className="m-auto flex-wrap justify-between">
-              <div className="my-16">
+              <div className="my-14">
                 <div className="avatar">
                   <div className="mb-8 rounded-full w-14 h-14">
                     <a href="https://twitter.com/yonathan_evann">
@@ -52,7 +53,7 @@ const Team = () => {
                 <p className="team_name">Nathan</p>
                 <p className="team_description">(Dev)</p>
               </div>
-              <div className="my-16">
+              <div className="my-14">
                 <div className="avatar">
                   <div className="mb-8 rounded-full w-14 h-14">
                     <a href="https://twitter.com/notarkaan?s=21">
@@ -64,6 +65,7 @@ const Team = () => {
                 <p className="team_description">(Community Relation)</p>
               </div> 
           </div>
+        </div>
       </div>
   
     )

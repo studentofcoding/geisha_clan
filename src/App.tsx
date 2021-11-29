@@ -107,12 +107,12 @@ const App = () => {
                   <div className="Hero_LinksContainer__De3u8">
                     <button className="sosmed_button">
                       <a href="https://discord.gg/b97UnqYN2w">
-                      Discord
+                        Discord
                       </a>
                     </button>
                     <button className="sosmed_button">
                       <a href="https://twitter.com/thegeishaclan">
-                      Twitter
+                        Twitter
                       </a>
                     </button>
                   </div>
@@ -125,10 +125,10 @@ const App = () => {
                       NEW JOURNEY
                     </p>
                     <p className="content mt-3">
-                    After taking part in the huge history of becoming a Japanese artist, Geisha want to find a new identity that had been lost in the modern era due to doubt and misconception.
-                    <br/>
-                    <br/>
-                    After a long Journey, The Geisha Clan finally found a way to the blockchain and was ready to make a new eternal life.
+                      After taking part in the huge history of becoming a Japanese artist, Geisha want to find a new identity that had been lost in the modern era due to doubt and misconception.
+                      <br />
+                      <br />
+                      After a long Journey, The Geisha Clan finally found a way to the blockchain and was ready to make a new eternal life.
                     </p>
                   </div>
                 </div>
@@ -169,65 +169,71 @@ const App = () => {
               </section>
 
               <section className='section roadmap-section'>
-              <div id="roadmap" className="flex flex-col w-full justify-center items-start text-left sm:text-center">
-                <p className='title w-full sm:text-5xl font-bold text-center sm:text-center text-2xl my-8'>ROADMAP</p>
-                <div className="card lg:card-side w-full">
-                  <div className="avatar m-4">
-                    <div className="w-24 h-24">
-                      <img alt="roadmap" src="./logo_white.png" />
+                <div id="roadmap" className="flex flex-col w-full justify-center items-start text-left sm:text-center">
+                  <p className='title w-full sm:text-5xl font-bold text-center sm:text-center text-2xl my-8'>ROADMAP</p>
+                  <div className="card lg:card-side w-full">
+                    <div className="avatar m-4">
+                      <div className="w-24 h-24">
+                        <img alt="roadmap" src="./logo_white.png" />
+                      </div>
                     </div>
-                  </div> 
-                  <div className="content card-body"> 
-                    <p>Chapter 1: The Journey
-                      <br/>
-                      The best Geisha starts a Journey and found a way to enter Solana Blockchain,
-The Clan will celebrate by Giving away best Solana NFT to the community, 
-and a Geisha for Lucky Holder.
-</p>
+                    <div className="content card-body">
+                      <p className="chapter">Chapter 1: The Journey
+                      </p>
+                      <p>
+                        The best Geisha starts a Journey and found a way to enter Solana Blockchain,
+                        The Clan will celebrate by Giving away best Solana NFT to the community,
+                        and a Geisha for Lucky Holder.
+                      </p>
+                    </div>
                   </div>
-                </div> 
-                <div className="card lg:card-side w-full">
-                  <div className="avatar m-4">
-                    <div className="w-24 h-24">
-                      <img alt="roadmap" src="./logo_white.png" />
+                  <div className="card lg:card-side w-full">
+                    <div className="avatar m-4">
+                      <div className="w-24 h-24">
+                        <img alt="roadmap" src="./logo_white.png" />
+                      </div>
                     </div>
-                  </div>  
-                  <div className="content card-body">
-                    <p>Chapter 2: Sakura Season (桜)
-                    <br/>
-                    After all The Geisha Clan gets deployed, Season will change. 
-And would be very magical time to make a Secondary Market and Rarity Placement for The Clan.
-</p>
+                    <div className="content card-body">
+                      <p className="chapter">Chapter 2: Sakura Season (桜)
+                      </p>
+                      <p>
+                        After all The Geisha Clan gets deployed, Season will change.
+                        And would be very magical time to make a Secondary Market and Rarity Placement for The Clan.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="card lg:card-side w-full">
+                    <div className="avatar m-4">
+                      <div className="w-24 h-24">
+                        <img alt="roadmap" src="./logo_white.png" />
+                      </div>
+                    </div>
+                    <div className="content card-body">
+                      <p className="chapter">Chapter 3 : Explore & Prepare
+                      </p>
+                      <p>
+                        The clan will prepare and look for mysterious creatures to help geisha assembling the force to protect their culture and identity.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="card lg:card-side w-full">
+                    <div className="avatar m-4">
+                      <div className="w-24 h-24">
+                        <img alt="roadmap" src="./logo_white.png" />
+                      </div>
+                    </div>
+                    <div className="content card-body">
+                      <p className="chapter">Chapter 4 : The Story Continues
+                      </p>
+                      <p>
+                        The Geisha Clan looking for new Alliance.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="card lg:card-side w-full">
-                  <div className="avatar m-4">
-                    <div className="w-24 h-24">
-                      <img alt="roadmap" src="./logo_white.png" />
-                    </div>
-                  </div>  
-                  <div className="content card-body">
-                    <p>Chapter 3 : Explore & Prepare
-                    <br/>
-                    The clan will prepare and look for mysterious creatures to help geisha assembling the force to protect their culture and identity.</p>
-                  </div>
-                </div>
-                <div className="card lg:card-side w-full">
-                  <div className="avatar m-4">
-                    <div className="w-24 h-24">
-                      <img alt="roadmap" src="./logo_white.png" />
-                    </div>
-                  </div>  
-                  <div className="content card-body">
-                    <p>Chapter 4 : The Story Continues
-                    <br/>
-                    The Geisha Clan looking for new Alliance.</p>
-                  </div>
-                </div>
-              </div>
-            </section>
+              </section>
 
-            <section className="team main-section">
+              <section className="team main-section">
                 <div id="team" className="w-full container mx-auto flex flex-row items-center">
                   <div className="w-1/2 m-10">
                     <img
@@ -239,20 +245,18 @@ And would be very magical time to make a Secondary Market and Rarity Placement f
                     <div className="flex justify-center w-full text-center">
                       <button className="sosmed_button">
                         <a href="https://twitter.com/thegeishaclan">
-                        Twitter
+                          Twitter
                         </a>
                       </button>
                       <button className="sosmed_button">
                         <a href="https://discord.gg/b97UnqYN2w">
-                        Discord
+                          Discord
                         </a>
                       </button>
                     </div>
                   </div>
 
-                  <div className="w-1/2 m-12 justify-center items-center text-center">
-                    <Team />
-                  </div>
+                  <Team />
                 </div>
               </section>
             </div>
