@@ -165,7 +165,7 @@ p.chapter {
     height: 200px;
   }
   .carousel-item > img {
-    width: 100%;
+    /* width: 100%; */
     height: auto;
     margin: 0 1em;
   }
@@ -242,7 +242,7 @@ p.chapter {
     height: 300px;
   }
   .carousel-item > img {
-    width: 100%;
+    /* width: 100%; */
     height: auto;
     margin: 0 15px;
   }
@@ -310,7 +310,7 @@ p.chapter {
     height: 300px;
   }
   .carousel-item > img {
-    width: 100%;
+    /* width: 100%; */
     height: auto;
     margin: 0 0.2em;
   }
@@ -365,7 +365,7 @@ p.chapter {
        height: 300px;
   }
   .carousel-item > img {
-      width: 100%;
+      /* width: 100%; */
       margin: 0 0.2em;
   }
   .card-body {
@@ -382,7 +382,7 @@ p.chapter {
       height: 300px;
   }
   .carousel-item > img {
-      width: 100%;
+      /* width: 100%; */
       margin: 0 0.2em;
   }
   #roadmap .content {
