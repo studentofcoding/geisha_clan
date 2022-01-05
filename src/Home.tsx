@@ -97,7 +97,6 @@ const Home = (props: HomeProps) => {
 
     if (now >= launchDate) {
       setCanMint(true);
-      return;
     }
   }, [whitelisted, address, launchDate, launchDateWhitelisted, now]);
 
@@ -232,7 +231,7 @@ const Home = (props: HomeProps) => {
           <div className="px-4 py-2 m-5 wallet border-solid border-4 border-white rounded-lg">
             <div className="content flex flex-row justify-around mx-3 text-left">
               <p className="w-2/3">
-                Price per geisha 1 SOL
+                Price per geisha 0.77 SOL
               </p>
               <img
                 className="smallLogo w-1/3"

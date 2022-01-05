@@ -3,6 +3,17 @@
   src: local("LaOriental"), url("./fonts/LaOriental.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "CocoSharp";
+  src: local("CocoSharp"), url("./fonts/Coco-Sharp-Regular-trial.ttf");
+}
+
+@font-face {
+  font-family: "CocoSharp-Bold";
+  font-weight: bold;
+  src: local("CocoSharp-Bold"), url("./fonts/Coco-Sharp-Bold-trial.ttf");
+}
+
 @tailwind base;
 
 @layer base {
