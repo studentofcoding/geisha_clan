@@ -1,3 +1,10 @@
+a.mint-link {
+  text-decoration: none !important;
+  color: white !important;
+  margin: auto;
+  padding: 5px;
+}
+
 .App {
   text-align: center;
 }

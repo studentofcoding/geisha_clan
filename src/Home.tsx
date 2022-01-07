@@ -67,38 +67,9 @@ const Home = (props: HomeProps) => {
   const [address, setAddress] = useState("");
   const now = new Date().getTime();
 
-  const launchDateWhitelisted = new Date(
-    Date.UTC(2021, 10, 11, 0, 0, 0, 0)
-  ).getTime();
-  const launchDate = new Date(Date.UTC(2021, 10, 29, 0, 5, 0, 0)).getTime();
+  const launchDate = new Date(Date.UTC(2022, 0, 14, 17, 0, 0, 0)).getTime();
   const [whitelisted, setWhitelisted] = useState(false);
   const [canMint, setCanMint] = useState(false);
-
-  useEffect(() => {
-    if (!address) {
-      setCanMint(false);
-      return;
-    }
-
-    if (now < launchDateWhitelisted) {
-      setCanMint(false);
-      return;
-    }
-
-    if (whitelisted && now >= launchDateWhitelisted) {
-      setCanMint(true);
-      return;
-    }
-
-    if (!whitelisted && now >= launchDateWhitelisted && now < launchDate) {
-      setCanMint(false);
-      return;
-    }
-
-    if (now >= launchDate) {
-      setCanMint(true);
-    }
-  }, [whitelisted, address, launchDate, launchDateWhitelisted, now]);
 
   useEffect(() => {
     if (wallet) setAddress(wallet?.publicKey.toBase58());
@@ -241,7 +212,13 @@ const Home = (props: HomeProps) => {
               />
             </div>
             {/* <ConnectButton>Connect Wallet</ConnectButton> */}
-            <ConnectButton disabled>Geisha Clan will be launched soon..</ConnectButton>
+            <Countdown
+              date={launchDate}
+              onMount={({ completed }) => completed && setIsActive(true)}
+              onComplete={() => setIsActive(true)}
+              renderer={renderCounter}
+            />
+            <ConnectButton disabled={isSoldOut || isMinting || !isActive || !canMint}>Geisha Clan will be launched in</ConnectButton>
             <p className="content mx-3 text-left">
               Please use Phantom wallet for the best experience
             </p>
@@ -309,7 +286,7 @@ const Home = (props: HomeProps) => {
                   ) : (
                     <Countdown
                       // date={startDate}
-                      date={launchDateWhitelisted}
+                      date={launchDate}
                       onMount={({ completed }) => completed && setIsActive(true)}
                       onComplete={() => setIsActive(true)}
                       renderer={renderCounter}
@@ -347,7 +324,7 @@ interface AlertState {
 const renderCounter = ({ days, hours, minutes, seconds, completed }: any) => {
   return (
     <CounterText>
-      {hours + (days || 0) * 24} hours, {minutes} minutes, {seconds} seconds
+      {days} days, {minutes} minutes, {seconds} seconds
     </CounterText>
   );
 };
