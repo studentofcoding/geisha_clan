@@ -128,7 +128,7 @@ const App = () => {
                       draggable="false"
                     />
                   </div>
-                  <ButtonLink disabled><a className="mint-link" style={{textDecoration: "none !important"}} href="https://mint.thegeishaclan.com/">Geisha Clan will be launched soon...</a></ButtonLink>
+                  <ButtonLink><a target="_blank" rel="noreferrer" className="mint-link" style={{textDecoration: "none !important"}} href="https://mint.thegeishaclan.com/">Join the clan</a></ButtonLink>
                   <p className="content mx-3 text-left">
                     Please use Phantom wallet for the best experience
                   </p>

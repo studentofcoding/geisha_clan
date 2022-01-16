@@ -212,13 +212,16 @@ const Home = (props: HomeProps) => {
               />
             </div>
             {/* <ConnectButton>Connect Wallet</ConnectButton> */}
-            <Countdown
+            <p className="content mx-3 text-left">
+              Mint your geisha here
+            </p>
+            {/* <Countdown
               date={launchDate}
               onMount={({ completed }) => completed && setIsActive(true)}
               onComplete={() => setIsActive(true)}
               renderer={renderCounter}
             />
-            <ConnectButton disabled={isSoldOut || isMinting || !isActive || !canMint}>Geisha Clan will be launched in</ConnectButton>
+            <ConnectButton disabled={isSoldOut || isMinting || !isActive || !canMint}>Geisha Clan will be launched in</ConnectButton> */}
             <p className="content mx-3 text-left">
               Please use Phantom wallet for the best experience
             </p>
