@@ -1,12 +1,12 @@
 import "./App.css";
 
-import Header from './components/Header';
-import Team from "./components/Team";
-import { Button, createTheme, ThemeProvider } from "@material-ui/core";
+// import Header from './components/Header';
+// import Team from "./components/Team";
+import { createTheme, ThemeProvider } from "@material-ui/core";
 
-import Carousel from "./components/Carousel";
+// import Carousel from "./components/Carousel";
 
-import styled from "styled-components";
+// import styled from "styled-components";
 
 
 const theme = createTheme({
@@ -34,13 +34,13 @@ const theme = createTheme({
   },
 });
 
-const ButtonLink = styled(Button)`
-  width: 100%;
-  text-align: center;
-  padding: auto !important;
-  background-color: #7a2031 !important;
-  color: white;
-`;
+// const ButtonLink = styled(Button)`
+//   width: 100%;
+//   text-align: center;
+//   padding: auto !important;
+//   background-color: #7a2031 !important;
+//   color: white;
+// `;
 
 const App = () => {
   return (
@@ -56,9 +56,9 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <div className="app-container">
           <section id="home" className="landing hero_section">
-            <Header />
+            {/* <Header /> */}
             <div className="Container">
-              <img
+              {/* <img
                 className="bigLogo"
                 src="./BIG_LOGO.png"
                 alt="The Geisha Clan"
@@ -75,10 +75,11 @@ const App = () => {
                     Twitter
                   </a>
                 </button>
-              </div>
+              </div> */}
             </div>
           </section>
-          <section id="journey" className="section journey">
+          
+          {/* <section id="journey" className="section journey">
             <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
               <div className="flex flex-col w-full justify-center items-start text-center">
                 <p className="title sm:text-5xl font-bold w-full">
@@ -93,13 +94,12 @@ const App = () => {
               </div>
             </div>
           </section>
+
           <section className="section main-section">
             <div className="container mx-auto w-full flex flex-wrap flex-col items-center">
               <p id="theclan" className="title sm:text-5xl font-bold w-full">
                 THE CLAN
               </p>
-              {/* <div className="Featured_Heading__1R2vu">
-              </div> */}
               <Carousel />
             </div>
           </section>
@@ -107,7 +107,6 @@ const App = () => {
           <section className="section main-section joinclan">
             <div className="joinClan w-full container mx-auto flex flex-row items-center">
               <div id="joinclan" className="title w-full justify-center text-center">
-                {/* JOIN THE CLAN */}
                 <img
                   className="joinClanLogo py-10"
                   src="./join_clan.png"
@@ -227,7 +226,7 @@ const App = () => {
 
               <Team />
             </div>
-          </section>
+          </section> */}
         </div>
       </ThemeProvider>
     </>
